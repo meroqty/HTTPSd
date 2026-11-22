@@ -1,0 +1,22 @@
+ЗАПУСК HTTP-СЕРВЕРА
+Сервер запущен: http://127.0.0.1:47037
+
+REST-КЛИЕНТ (CRUD)
+GET    /api/items       -> 200  {"items": []}
+POST   /api/items       -> 201  {"id": 1, "name": "Учебная запись"}
+PUT    /api/items/1     -> 200  {"id": 1, "name": "Изменённая запись"}
+GET    /api/items/1     -> 200  {"id": 1, "name": "Изменённая запись"}
+DELETE /api/items/1     -> 200  {"deleted": 1}
+GET    /api/items/1     -> 404  {"error": "Запись не найдена"}
+Все CRUD-операции выполнены успешно.
+
+АВТОМАТИЧЕСКИЕ ТЕСТЫ
+test_bad_json_and_validation (test_api.ApiTests.test_bad_json_and_validation) ... ok
+test_crud (test_api.ApiTests.test_crud) ... ok
+test_http_11_and_length (test_api.ApiTests.test_http_11_and_length) ... ok
+test_static_content_types (test_api.ApiTests.test_static_content_types) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.523s
+
+OK
